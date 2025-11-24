@@ -5,6 +5,13 @@
 #include <algorithm>
 #include <cmath>
 
+void freeTree(Noeud* n) {
+    if (!n) return;
+    freeTree(n->enfantG);
+    freeTree(n->enfantD);
+    delete n;
+}
+
 void checkArbre(Noeud* n) {
     if (!n) throw std::invalid_argument("Noeud null");
     
@@ -134,6 +141,7 @@ void print_truth_table(const std::string& formula)
 
         std::cout << eval(root, variables) << " |\n";
     }
+    freeTree(root);
     std::cout<< "__________________________________" << std::endl;
 }
 

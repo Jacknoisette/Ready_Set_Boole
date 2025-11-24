@@ -394,6 +394,7 @@ bool sat(const std::string& formula, bool display_tab)
         }
         if (display_tab)
             std::cout<< "__________________________________" << std::endl;
+        freeTree(root);
     } catch (...){
         throw;
     }
