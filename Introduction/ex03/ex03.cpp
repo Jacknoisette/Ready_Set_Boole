@@ -112,12 +112,12 @@ bool eval_formula(std::string str){
 
 int main (void){
     try {
-        std::cout << eval_formula("10&") << std::endl;
-        std::cout << eval_formula("10|") << std::endl;
-        std::cout << eval_formula("11>") << std::endl;
-        std::cout << eval_formula("10=") << std::endl;
-        std::cout << eval_formula("1011||=") << std::endl;
-        std::cout << eval_formula("11^|") << std::endl;
+        std::cout << "formula 10& => " << eval_formula("10&") << std::endl;
+        std::cout << "formula 10| => " << eval_formula("10|") << std::endl;
+        std::cout << "formula 11> => " << eval_formula("11>") << std::endl;
+        std::cout << "formula 10= => " << eval_formula("10=") << std::endl;
+        std::cout << "formula 1011||= => " << eval_formula("1011||=") << std::endl;
+        std::cout << "formula 11^| => " << eval_formula("11^|") << std::endl;
     } catch (const std::invalid_argument& e){
         std::cout << "Erreur : " << e.what() << std::endl;
     }

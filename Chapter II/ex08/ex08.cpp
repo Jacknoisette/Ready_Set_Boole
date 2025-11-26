@@ -28,7 +28,13 @@ int main(void) {
             return a < b;
         });
 
-    std::cout << "Powerset de {1, 2, 3} :\n";
+    std::cout << "Powerset de {";
+    for (size_t i = 0; i < set.size(); i++){
+        std::cout << set[i];
+        if (i != set.size() - 1)
+            std::cout << ", ";
+    }
+    std::cout << "} :\n";
     std::cout << "{\n";
     for (const auto& subset : result) {
         std::cout << "  {";
